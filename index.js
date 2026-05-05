@@ -31,7 +31,7 @@ app.get("/generate", async (req, res) => {
 app.post("/suggestions", async (req, res) => {
   let name = req.body.name;
   let desc = req.body.description;
-  let source = req.body.source;
+  let source = req.body.textField;
   let color = req.body.color;
   let q =
     "insert into suggestions (name, description, source, colorHex) values(?, ?, ?, ?)";
