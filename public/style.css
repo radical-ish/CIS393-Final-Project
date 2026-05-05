@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(31, 33, 68);
+  color: rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+#welcome {
+  font-weight: bold;
+  font-size: x-large;
+}
+#navbar {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+a {
+  color: white;
+}
+.submit {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 17px;
+}
+.container,
+#navbar > a,
+button {
+  background-color: rgb(10, 5, 25);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  border: 10px;
+  border-style: ridge groove groove ridge;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+button {
+  border-style: groove ridge ridge groove;
+}
+button:hover {
+  background-color: rgb(41, 20, 101);
+}
+button:active {
+  background-color: rgb(10, 5, 25);
+  border-style: solid;
+}
+.container div,
+.container p {
+  padding: 5px;
+  text-align: left;
+}
+#suggestion {
+  width: 400px;
+  margin: auto;
+}
+textarea {
+  resize: none;
+}
+#topic {
+  text-align: center;
+}
+table {
+  width: 80%;
+  margin: auto;
+  border: 10px white;
+  border-style: ridge groove groove ridge;
+  background-color: rgb(10, 5, 25);
+  border-radius: 10px;
+}
+td,
+th {
+  padding: 10px;
+}
+.color {
+  width: 40px;
+  height: 40px;
+  border: 10px white;
+  border-style: ridge groove groove ridge;
+  border-radius: 10px;
+}

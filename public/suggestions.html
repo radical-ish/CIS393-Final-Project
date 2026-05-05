@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="./validateForm.js" defer></script>
+    <title>Submit a Suggestion!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Teach me something!</h2>
+    </div>
+    <nav id="navbar">
+      <a href="/index.html">Home</a>
+      <a href="/generate">Generate</a>
+      <a href="/suggestions.html">Suggestions</a>
+      <a href="/about.html">About</a>
+    </nav>
+    <p>Got some fun facts? Let me know below!</p>
+    <form id="suggestionForm" action="/suggestions" method="post">
+      <div id="suggestion" class="container">
+        <div>
+          <label for="name">Name (Optional):</label>
+        </div>
+        <div>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div>
+          <label for="textField">Source:</label>
+        </div>
+        <div>
+          <p hidden id="error1" style="color: red; font-size: 10px">
+            * Required
+          </p>
+          <input
+            id="textField"
+            name="textField"
+            type="text"
+            placeholder="Book, article, etc."
+          />
+        </div>
+        <div>
+          <label for="description">Fun Fact Description: </label>
+        </div>
+        <div>
+          <p hidden id="error2" style="color: red; font-size: 10px">
+            * Required
+          </p>
+          <textarea
+            id="description"
+            name="description"
+            maxlength="500"
+            placeholder="Write your fun fact here!"
+            rows="2"
+            cols="40"
+          ></textarea>
+        </div>
+        <div>
+          <label for="color">Your Favorite Color (just for fun):</label>
+        </div>
+        <div>
+          <input id="color" name="color" type="color" />
+        </div>
+        <div>
+          <input id="submit" type="submit" value="Send" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

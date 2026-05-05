@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Randomized Fun Facts!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Random (possibly inaccurate, biased, and curated) Fun Fact Generator
+      </h1>
+    </div>
+      <nav id="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/generate">Generate</a>
+        <a href="/suggestions.html">Suggestions</a>
+        <a href="/about.html">About</a>
+        <div></div>
+        <a href="/articles">Articles</a>
+        <a href="/suggestionData">Suggestion Table</a>
+        <div></div>
+      </nav>
+      <div style="text-align: center;">
+    <a href="/insert""><button>Insert</button></a>
+    </div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Fact</th>
+            <th>Details</th>
+        </tr>
+        <% for(let i = 0; i < result.length; i++){ %>
+            <tr>
+                <td><%=result[i].id%></td>
+                <td><%=result[i].title%></td>
+                <td><%=result[i].detail%></td>
+                <td>
+                    <a href="/update/<%=result[i].id%>""><button>Update</button></a>
+                    <a href="/articles/delete/<%=result[i].id%>""><button>Delete</button></a>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+  </body>
+</html>

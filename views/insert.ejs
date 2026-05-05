@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="./validateForm.js" defer></script>
+    <!--Link is not working for some reason-->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: rgb(31, 33, 68);
+        color: rgb(255, 255, 255);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      #welcome {
+        font-weight: bold;
+        font-size: x-large;
+      }
+      #navbar {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+      a {
+        color: white;
+      }
+      .submit {
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 17px;
+      }
+      .container,
+      #navbar > *,
+      button {
+        background-color: rgb(10, 5, 25);
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        border: 10px;
+        border-style: ridge groove groove ridge;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+      }
+      button {
+        border-style: groove ridge ridge groove;
+      }
+      button:hover {
+        background-color: rgb(41, 20, 101);
+      }
+      button:active {
+        background-color: rgb(10, 5, 25);
+        border-style: solid;
+      }
+      .container div {
+        padding: 5px;
+        text-align: left;
+      }
+      #insertForm {
+        width: 400px;
+        margin: auto;
+      }
+      textarea {
+        resize: none;
+      }
+      #topic {
+        text-align: center;
+      }
+    </style>
+    <title>Submit a Suggestion!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Add a fact!</h2>
+    </div>
+    <nav id="navbar">
+      <a href="/index.html">Home</a>
+      <a href="/generate">Generate</a>
+      <a href="/suggestions.html">Suggestions</a>
+      <a href="/about.html">About</a>
+    </nav>
+    <form id="insertForm" action="/insert" method="post">
+      <div id="insert" class="container">
+        <div>
+          <label for="textField">Fact:</label>
+        </div>
+        <div>
+          <p hidden id="error1" style="color: red; font-size: 10px">
+            * Required
+          </p>
+          <textarea
+            id="textField"
+            name="textField"
+            maxlength="1000"
+            rows="1"
+            cols="45"
+          ></textarea>
+        </div>
+        <div>
+          <label for="description">Description: </label>
+        </div>
+        <div>
+          <p hidden id="error2" style="color: red; font-size: 10px">
+            * Required
+          </p>
+          <textarea
+            id="description"
+            name="description"
+            maxlength="1000"
+            rows="4"
+            cols="45"
+          ></textarea>
+        </div>
+        <div>
+          <input id="submit" type="submit" value="Send" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

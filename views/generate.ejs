@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Generate</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Did you know...?</h2>
+    </div>
+    <nav id="navbar">
+      <a href="/index.html">Home</a>
+      <a href="/generate">Generate</a>
+      <a href="/suggestions.html">Suggestions</a>
+      <a href="/about.html">About</a>
+    </nav>
+    <div style="text-align: center">
+      <a href="/generate"><button type="submit">Generate Fact</button></a>
+    </div>
+    <div class="container">
+      <h2 id="topic"><%=result.title%></h2>
+      <p id="detail"><%=result.detail%></p>
+    </div>
+  </body>
+</html>
